@@ -19,43 +19,50 @@ const routes = [
   {
     path: '/login',
     name: 'Login',
-    component: Login
+    component: Login,
   },
   {
     path: '/home',
     name: 'Home',
     component: Home,
     redirect: Welcome,
+    meta: {title: '首页',first: 1},
     children: [
       {
         path: '/welcome',
         name: 'Welcome',
-        component: Welcome
+        component: Welcome,
+        meta: {title: '首页'}
       },
       {
         path: '/data',
         name: 'Data',
-        component: Data
+        component: Data,
+        meta: {title: '数据面板'}
       },
       {
         path: '/order',
         name: 'Order',
-        component: Order
+        component: Order,
+        meta: {title: '订单列表'}
       },
       {
         path: '/detail',
-        name: Detail,
-        component: Detail
+        name: 'Detail',
+        component: Detail,
+        meta: {title: '收支记录'}
       },
       {
         path: '/pay',
-        name: Pay,
-        component: Pay
+        name: 'Pay',
+        component: Pay,
+        meta: {title: '类目管理'}
       },
       {
         path: '/categories',
-        name: Categories,
-        component: Categories
+        name: 'Categories',
+        component: Categories,
+        meta: {title: '属性管理'}
       }
     ]
   }
