@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './store'
 
 import './assets/style/normalize.css'
 import './assets/global.css'
@@ -36,5 +37,6 @@ Vue.filter('dateFormat', function (originVal) {
 new Vue({
   el: '#app',
   router,
+  store,
   render: h => h(App)
 })

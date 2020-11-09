@@ -1,6 +1,5 @@
 <template>
   <div class="pay_container">
-    <BreadCrumb :breadList="breadList"></BreadCrumb>
     <div class="all_content">
       <el-card>
         <el-row class="pay_wrap">
@@ -97,13 +96,9 @@
 </template>
 
 <script>
-import BreadCrumb from "../../components/breadcrumb/BreadCrumb";
 import {orderTableData} from '../../data/index.js'
 export default {
   name: "Pay",
-  components: {
-    BreadCrumb
-  },
   data() {
     return {
       breadList: [

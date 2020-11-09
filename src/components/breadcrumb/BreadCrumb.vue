@@ -1,13 +1,13 @@
 <template>
   <div class="navBar">
     <el-breadcrumb separator="/" >
-      <div class="menuImg">
-        <i class="el-icon-s-fold"></i>
-        <!--          <i class="el-icon-s-unfold"></i>-->
+      <div class="menuImg" @click="showSidebar">
+        <i class="el-icon-s-fold" v-if="$store.state.isCollapse"></i>
+        <i class="el-icon-s-unfold" v-else></i>
       </div>
       <div class="breadItem">
 <!--        <el-breadcrumb-item :to="{ path: '/home' }">首页</el-breadcrumb-item>-->
-        <el-breadcrumb-item v-for="item in breadList" :key="item.index">{{item.meta.title}}</el-breadcrumb-item>
+        <el-breadcrumb-item v-for="item in breadList" :key="item.path">{{item.meta.title}}</el-breadcrumb-item>
       </div>
 
     </el-breadcrumb>
@@ -60,6 +60,9 @@ export default {
 
       console.log(matched)
       this.breadList = matched;
+    },
+    showSidebar() {
+      this.$emit('showSidebar')
     }
   }
 }

@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    <BreadCrumb :breadList="breadList"></BreadCrumb>
 
     <div class="all_content">
       <el-radio-group v-model="selectRadio.status">

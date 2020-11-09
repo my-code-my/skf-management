@@ -1,13 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Login from '../views/login/Login'
-import Home from '../views/home/Home'
-import Welcome from "../views/home/Welcome"
-import Data from "../views/data/Data"
-import Order from "../views/order/Order"
-import Detail from "../views/order/Detail"
-import Pay from "../views/order/Pay";
-import Categories from "../views/categories/Categories"
+import Login from '@/views/login/Login'
+import Home from '@/views/home/Home'
+import Welcome from "@/views/home/Welcome"
+import Data from "@/views/data/Data"
+import Order from "@/views/order/Order"
+import Detail from "@/views/order/Detail"
+import Pay from "@/views/order/Pay"
+import Categories from "@/views/categories/Categories"
+import Props from "@/views/props/Props"
 
 Vue.use(Router)
 
@@ -26,7 +27,7 @@ const routes = [
     name: 'Home',
     component: Home,
     redirect: Welcome,
-    meta: {title: '首页',first: 1},
+    meta: {title: '首页'},
     children: [
       {
         path: '/welcome',
@@ -63,9 +64,15 @@ const routes = [
         name: 'Categories',
         component: Categories,
         meta: {title: '属性管理'}
+      },
+      {
+        path: '/props',
+        name: 'Props',
+        component: Props,
+        meta: {title: '属性管理'}
       }
     ]
-  }
+  },
 ]
 
 const router = new Router({

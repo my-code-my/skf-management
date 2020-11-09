@@ -1,6 +1,5 @@
 <template>
   <div class="data_container">
-    <BreadCrumb :breadList="breadList"></BreadCrumb>
 
     <div class="data_wrap">
       <el-row :gutter="40">
@@ -132,19 +131,8 @@
 </template>
 
 <script>
-import BreadCrumb from "../../components/breadcrumb/BreadCrumb";
 export default {
   name: "Data",
-  components: {
-    BreadCrumb
-  },
-  data() {
-    return {
-      breadList: [
-        {id: 1, name: '数据面板'}
-      ]
-    }
-  }
 }
 </script>
 

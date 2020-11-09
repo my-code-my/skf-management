@@ -1,6 +1,5 @@
 <template>
   <div>
-    <BreadCrumb :breadList="breadList"></BreadCrumb>
     <div class="all_content">
       <el-page-header @back="$router.push('/order')" content="详情页面"></el-page-header>
       <div class="base_info_wrap">
@@ -52,20 +51,8 @@
 </template>
 
 <script>
-import BreadCrumb from "../../components/breadcrumb/BreadCrumb";
 export default {
-  name: "Detail",
-  components: {
-    BreadCrumb
-  },
-  data() {
-    return {
-      breadList: [
-        {id: 1,name: '订单管理'},
-        {id: 2,name: '订单详情'}
-      ]
-    }
-  }
+  name: "Detail"
 }
 </script>
 
