@@ -1,0 +1,20 @@
+
+* {
+  box-sizing: border-box;
+}
+#app, html, body, .login_container {
+  height: 100%;
+}
+a {
+  text-decoration: none;
+}
+.all_content {
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+.el-table {
+  margin-top: 20px;
+}
+.el-pagination {
+  margin-top: 20px;
+}
