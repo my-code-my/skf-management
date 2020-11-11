@@ -1,6 +1,9 @@
 <template>
   <div class="data_container">
+<<<<<<< HEAD
     <BreadCrumb :breadList="breadList"></BreadCrumb>
+=======
+>>>>>>> order-list
 
     <div class="data_wrap">
       <el-row :gutter="40">
@@ -132,6 +135,7 @@
 </template>
 
 <script>
+<<<<<<< HEAD
 import BreadCrumb from "../../components/breadcrumb/BreadCrumb";
 export default {
   name: "Data",
@@ -145,6 +149,10 @@ export default {
       ]
     }
   }
+=======
+export default {
+  name: "Data",
+>>>>>>> order-list
 }
 </script>
 

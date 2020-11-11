@@ -5,6 +5,12 @@
 #app, html, body, .login_container {
   height: 100%;
 }
+<<<<<<< HEAD
+=======
+body {
+  font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Arial,sans-serif;
+}
+>>>>>>> order-list
 a {
   text-decoration: none;
 }
@@ -18,3 +24,7 @@ a {
 .el-pagination {
   margin-top: 20px;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> order-list

@@ -13,7 +13,12 @@
     "element-ui": "^2.14.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
+<<<<<<< HEAD
     "vue-table-with-tree-grid": "^0.2.4"
+=======
+    "vue-table-with-tree-grid": "^0.2.4",
+    "vuex": "^3.5.1"
+>>>>>>> order-list
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

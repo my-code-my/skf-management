@@ -1,9 +1,5 @@
 <template>
   <div class="pay_container">
-<<<<<<< HEAD
-    <BreadCrumb :breadList="breadList"></BreadCrumb>
-=======
->>>>>>> order-list
     <div class="all_content">
       <el-card>
         <el-row class="pay_wrap">
@@ -100,19 +96,9 @@
 </template>
 
 <script>
-<<<<<<< HEAD
-import BreadCrumb from "../../components/breadcrumb/BreadCrumb";
 import {orderTableData} from '../../data/index.js'
 export default {
   name: "Pay",
-  components: {
-    BreadCrumb
-  },
-=======
-import {orderTableData} from '../../data/index.js'
-export default {
-  name: "Pay",
->>>>>>> order-list
   data() {
     return {
       breadList: [

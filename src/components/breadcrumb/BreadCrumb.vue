@@ -1,6 +1,7 @@
 <template>
   <div class="navBar">
     <el-breadcrumb separator="/" >
+<<<<<<< HEAD
       <div class="menuImg">
         <i class="el-icon-s-fold"></i>
         <!--          <i class="el-icon-s-unfold"></i>-->
@@ -8,6 +9,15 @@
       <div class="breadItem">
         <el-breadcrumb-item :to="{ path: '/home' }">首页</el-breadcrumb-item>
         <el-breadcrumb-item v-for="item in breadList" :key="item.index">{{item.name}}</el-breadcrumb-item>
+=======
+      <div class="menuImg" @click="showSidebar">
+        <i class="el-icon-s-fold" v-if="$store.state.isCollapse"></i>
+        <i class="el-icon-s-unfold" v-else></i>
+      </div>
+      <div class="breadItem">
+<!--        <el-breadcrumb-item :to="{ path: '/home' }">首页</el-breadcrumb-item>-->
+        <el-breadcrumb-item v-for="item in breadList" :key="item.path">{{item.meta.title}}</el-breadcrumb-item>
+>>>>>>> order-list
       </div>
 
     </el-breadcrumb>
@@ -26,6 +36,7 @@
 <script>
 export default {
   name: "BreadCrumb",
+<<<<<<< HEAD
   props: {
     breadList: {
       type: Array,
@@ -39,6 +50,46 @@ export default {
   },
   computed: {
 
+=======
+  // props: {
+  //   breadList: {
+  //     type: Array,
+  //     default() {
+  //       return []
+  //     },
+  //     isCollapse: {
+  //       type: Boolean
+  //     }
+  //   }
+  // },
+  data() {
+    return {
+      breadList: [] //路由集合
+    }
+  },
+  watch: {
+    $route() {
+      this.getBreadCrumb()
+    }
+  },
+  created() {
+    this.getBreadCrumb()
+  },
+  methods: {
+    getBreadCrumb() {
+
+      let matched = this.$route.matched.filter(item => item.meta.title)
+      if(matched[0].meta.title === '首页' && matched[1].meta.title==='首页') {
+        matched = [{path: '/',meta: {title: '首页'}}]
+      }
+
+      console.log(matched)
+      this.breadList = matched;
+    },
+    showSidebar() {
+      this.$emit('showSidebar')
+    }
+>>>>>>> order-list
   }
 }
 </script>

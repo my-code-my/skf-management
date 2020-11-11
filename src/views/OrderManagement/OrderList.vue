@@ -1,9 +1,5 @@
 <template>
   <div class="container">
-<<<<<<< HEAD
-    <BreadCrumb :breadList="breadList"></BreadCrumb>
-=======
->>>>>>> order-list
 
     <div class="all_content">
       <el-radio-group v-model="selectRadio.status">
@@ -116,7 +112,7 @@
             <el-table-column label="操作" width="120px">
               <template slot-scope="scope">
                 <div class="btns_wrap">
-                  <el-button @click="$router.push('/detail')" type="text" size="small">查看</el-button>
+                  <el-button @click="$router.push('/OrderDetail')" type="text" size="small">查看</el-button>
                   <el-button type="text" size="small" @click="defineDialogVisible=true">确认订单</el-button>
                   <el-button type="text" size="small" @click="editDialogVisible=true">修改订单</el-button>
                   <el-button type="text" size="small" @click="recordDialogVisible=true">操作记录</el-button>

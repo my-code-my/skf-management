@@ -1,9 +1,5 @@
 <template>
   <div>
-<<<<<<< HEAD
-    <BreadCrumb :breadList="breadList"></BreadCrumb>
-=======
->>>>>>> order-list
     <el-card>
       <tree-table :data="categoriesList"
                   :columns="columns"
@@ -65,27 +61,11 @@
 </template>
 
 <script>
-<<<<<<< HEAD
-import BreadCrumb from "../../components/breadcrumb/BreadCrumb";
-import {categoriesList} from "../../data/index"
-export default {
-  name: "Categories",
-  components: {
-    BreadCrumb,
-  },
-  data() {
-    return {
-      breadList: [
-        {id: 1, name: '商品管理'},
-        {id: 2, name: '类目管理'}
-      ],
-=======
-import {categoriesList} from "../../data/index"
+import {categoriesList} from "../../data"
 export default {
   name: "Categories",
   data() {
     return {
->>>>>>> order-list
       categoriesList,
       columns: [
         {
