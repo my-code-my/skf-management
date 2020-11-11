@@ -9,13 +9,13 @@ export const menuList = [
         authName: "订单列表",
         id: 110,
         order: null,
-        path: "order"
+        path: "OrderList"
       },
       {
         authName: "收支记录",
         id: 111,
         order: null,
-        path: "pay"
+        path: "Pay"
       }
     ]
   },
@@ -23,37 +23,37 @@ export const menuList = [
     authName: "商品管理",
     id: 128,
     order: 4,
-    path: "goods",
+    path: "GoodsManagement",
     children: [
       {
         authName: "类目管理",
         id: 112,
         order: null,
-        path: "categories"
+        path: "Categories"
       },
       {
         authName: "属性管理",
         id: 113,
         order: null,
-        path: "props"
+        path: "Props"
       },
       {
         authName: "密封商品列表",
         id: 114,
         order: null,
-        path: "seal"
+        path: "SealList"
       },
       {
         authName: "轴承商品列表",
         id: 115,
         order: null,
-        path: "bearing"
+        path: "BearingList"
       },
       {
         authName: "润滑产品列表",
         id: 116,
         order: null,
-        path: "lubricationProduct"
+        path: "lubricationList"
       },
       {
         authName: "润滑机型管理",
@@ -144,16 +144,20 @@ export const orderTableData =  [
     goods_code: 6009.0,
     number: 10,
     imgUrl: 'https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg',
+    preview_imgUrl: 'https://aws-skf-cn-skf4u-project.s3.cn-north-1.amazonaws.com.cn/uat/shop/uat/shop/skf-admin/369fe622cb604117895e74c0a3037c4e',
+    price: 100.12,
     total_price: 1008.6,
-    contact_name: '周华强',
+    contact_name: '周总',
     tel: 12345678,
-    address: '四川省巴中市通江县',
+    address: '四川省成都市',
     order_status: '1',
     commit_time: 1234567927,
     pay_time: 23812531673321,
     pay_type: '线上',
     send_time: 6162514241784,
-
+    delivery_time: '1-50个工作日',
+    weight: '0.001kg',
+    detail_url: 'https://aws-skf-cn-skf4u-project.s3.cn-north-1.amazonaws.com.cn/skf4u/demo/skf4u/demo/skf-admin/6d32bcc5e3b2479aba468a0601204724.jpg'
   },
   {
     id: 2,
@@ -164,14 +168,16 @@ export const orderTableData =  [
     number: 10,
     imgUrl: 'https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg',
     total_price: 1008.6,
-    contact_name: '周华强',
+    contact_name: '周总',
     tel: 12345678,
-    address: '四川省巴中市通江县',
+    address: '四川省成都市',
     order_status: '0',
     commit_time: 1234567927,
     pay_time: 23812531673321,
     pay_type: '线上',
-    send_time: 6162514241784
+    send_time: 6162514241784,
+    delivery_time: '1-50个工作日',
+    weight: '0.001kg'
   },
   {
     id: 3,
@@ -182,14 +188,16 @@ export const orderTableData =  [
     number: 10,
     imgUrl: 'https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg',
     total_price: 1008.6,
-    contact_name: '周华强',
+    contact_name: '周总',
     tel: 12345678,
-    address: '四川省巴中市通江县',
+    address: '四川省成都市',
     order_status: 1,
     commit_time: 1234567927,
     pay_time: 23812531673321,
     pay_type: '线上',
-    send_time: 6162514241784
+    send_time: 6162514241784,
+    delivery_time: '1-50个工作日',
+    weight: '0.001kg'
   },
   {
     id: 4,
@@ -200,14 +208,16 @@ export const orderTableData =  [
     number: 10,
     imgUrl: 'https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg',
     total_price: 1008.6,
-    contact_name: '周华强',
+    contact_name: '周总',
     tel: 12345678,
-    address: '四川省巴中市通江县',
+    address: '四川省成都市',
     order_status: 1,
     commit_time: 1234567927,
     pay_time: 23812531673321,
     pay_type: '线上',
-    send_time: 6162514241784
+    send_time: 6162514241784,
+    delivery_time: '1-50个工作日',
+    weight: '0.001kg'
   }
 ]
 //类目管理数据
@@ -455,4 +465,24 @@ export const cascaderList = [
         }]
     }]
  }]
+
+//下拉选择器数据
+export const selectList =  [{
+  value: '选项1',
+  label: '密封圈1'
+}, {
+  value: '选项2',
+  label: '双皮奶'
+}, {
+  value: '选项3',
+  label: '密封圈2'
+}, {
+  value: '选项4',
+  label: '龙须面'
+}, {
+  value: '选项5',
+  label: '北京烤鸭'
+}]
+
+export const detailList =  orderTableData[0]
 
